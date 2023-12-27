@@ -1,0 +1,32 @@
+<p>dashboard works!</p>
+<mat-form-field>
+    <input matInput color="primary" placeholder="Poll Title" [(ngModel)]="newPoll.title" type="text">
+</mat-form-field>
+<mat-form-field>
+    <input matInput color="primary" placeholder="Option Description" [(ngModel)]="newOption.value" type="text">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="addPollOption()"><mat-icon>add</mat-icon>Add</button>
+
+<p>Added Options</p>
+<p *ngFor="let opt of newPoll.poll_options">{{opt.value}}</p>
+
+<div *ngIf="this.generatedPoll.src.length">
+    <h3>Generated Poll</h3>
+    <div class="strawpoll-embed" [id]="generatedPoll.id" style="height: 452px; max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;">
+        <iframe title="StrawPoll Embed" [id]="generatedPoll.iframe_id" [src]="allowGeneratedPoll()" style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1;" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe>
+        <script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script>
+    </div>
+</div>
+
+<button mat-raised-button color="primary" (click)="createPoll()">Create Poll</button>
+
+
+<!-- 
+
+        navigation?
+    |  Active Poll   | -> i guess just in here, if no poll then mention no poll active 
+    |  New Poll      | -> maybe as a button, pulls a modal up when done redirect to active poll component? 
+    |  Poll History  | -> list with all previous polls
+    |  Poll Reports  | -> graphs to show what won the most etc 
+
+ -->
