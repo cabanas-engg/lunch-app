@@ -1,11 +1,21 @@
 <p>dashboard works!</p>
-<mat-form-field>
+<mat-form-field appearance="outline">
     <input matInput color="primary" placeholder="Poll Title" [(ngModel)]="newPoll.title" type="text">
 </mat-form-field>
-<mat-form-field>
+<mat-form-field appearance="outline">
     <input matInput color="primary" placeholder="Option Description" [(ngModel)]="newOption.value" type="text">
 </mat-form-field>
 <button mat-raised-button color="primary" (click)="addPollOption()"><mat-icon>add</mat-icon>Add</button>
+
+<button mat-raised-button color="primary" (click)="addPollOption()">
+    <mat-icon>add</mat-icon>Chipotle
+</button>
+<div style="display: flex;" class="option-container">
+    <span  matTooltip="Chipotle" class="member-label">
+        <b>C</b>
+    </span>
+    <p style="padding: 0; margin: 0px;">Chipotle</p>
+</div>
 
 <p>Added Options</p>
 <p *ngFor="let opt of newPoll.poll_options">{{opt.value}}</p>

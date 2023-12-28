@@ -50,16 +50,16 @@ export class TextPollOption {
 
 export class PollConfig {
     is_private: boolean = true;
-    vote_type: string = "default";
+    vote_type: "default" | "box_small" | "participant_grid" = "box_small";
     allow_comments: boolean = false;
     allow_indeterminate: boolean = false;
     allow_other_option: boolean = false;
-    custom_design_colors: {} = {};
-    deadline_at: number = 1649671274;
-    duplication_checking: string = "session";
+    custom_design_colors: {} = {};                                  
+    deadline_at: number = (Math.floor(Date.now() / 1000) + 10850);
+    duplication_checking: "ip" | "session" | "invite" | "none" = "session";
     allow_vpn_users: boolean = false;
-    edit_vote_permissions: string = "admin";
-    force_appearance: string = "auto";
+    edit_vote_permissions: "admin" | "admin_voter" | "voter" | "nobody" = "admin";
+    force_appearance: "auto" | "dark" | "light" = "dark";
     hide_participants: boolean = false;
     is_multiple_choice: boolean = true;
     multiple_choice_min: number = 1;
@@ -67,7 +67,7 @@ export class PollConfig {
     number_of_winners: number = 1;
     randomize_options: boolean = false;
     require_voter_names: boolean = false;
-    results_visibility: string = "after_vote";
+    results_visibility: "always" | "after_deadline"| "after_vote"| "never" = "after_vote";
     use_custom_design: boolean = true;
 
 
