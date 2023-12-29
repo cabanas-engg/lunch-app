@@ -35,9 +35,15 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  addPollOption(): void {
-    this.newPoll.addOption(this.newOption);
-    this.newOption = new TextPollOption();
+  // addPollOption(): void {
+  //   this.newPoll.addOption(this.newOption);
+  //   this.newOption = new TextPollOption();
+  // }
+
+  addPollOption(optionValue: string): void {
+    let newOption = new TextPollOption()
+    newOption.value = optionValue;
+    this.newPoll.addOption(newOption);
   }
 
   allowGeneratedPoll() {

@@ -12,6 +12,13 @@ import {
   HttpClientModule,
   HttpClient
 } from '@angular/common/http';
+import { FullComponent } from './layouts/full/full.component';
+import { NavigationComponent } from './shared/header/navigation.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+import { routes } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,9 +28,19 @@ import {
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    FullComponent,
+    RouterModule.forRoot(routes, { useHash: false }),
+    NavigationComponent,
+    SidebarComponent,
+    NgbModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: PathLocationStrategy
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
