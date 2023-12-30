@@ -17,9 +17,10 @@
 
 .page-wrapper > .container-fluid {
   padding: 20px;
-  min-height: calc(100vh - 180px);
   max-width: $page-wrapper-max-width;
   margin: 0 auto;
+  max-height: calc(100vh - 65px);
+  overflow: scroll;
 }
 
 /*******************
@@ -133,4 +134,5 @@ Vertical responsive layout
   font-size: 1.5rem;
   margin: 10px;
   font-family: inherit;
+  letter-spacing: 3px;
 }

@@ -1,0 +1,65 @@
+.option-card {
+    padding: 10px 14px;
+    border-radius: 35px;
+    border-style: solid;
+    border-width: 1px;
+    max-width: fit-content;
+    transition: all 0.2s;
+
+    i{
+        display: none;
+    }
+
+    &.active {
+        background-color: #00ff006b;
+    }
+
+    &:hover {
+        border-color: #6c757d !important;
+        transform: scale(1.02);
+        cursor: pointer;
+
+        h3 {
+            color: #233242;
+        }
+
+        .text-muted {
+            color: #233242b0 !important;
+        }
+
+        #option-icon span {
+            display: none
+        }
+
+        #option-icon  {
+            transform-origin: 50% 50%;
+            transform: rotate(45deg);
+            animation: rotate-in 0.2s ease-out forwards;
+        }
+          
+        i{
+            color: #fff;
+            display:unset;
+        }
+    }
+
+}
+
+.card-column {
+    max-width: fit-content;
+    padding: 0px 5px;
+    margin: 0px;
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+@keyframes rotate-in {
+    from {
+        transform: rotate(0deg) translateX(-10px) translateY(8px) rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg) translateX(0px) translateY(0px) rotate(-45deg);
+    }
+}

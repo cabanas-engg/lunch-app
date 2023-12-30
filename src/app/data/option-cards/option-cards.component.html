@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-6 col-lg-3 card-column" *ngFor='let option of options'>
+        <div class="card">
+            <div class="option-card" (click)="addOption(option)" [style.border-color]="option.icon_color" [class.active]="option.active">
+                <div class="d-flex align-items-center">
+                    <div class="btn btn-lg rounded-circle round round-lg fs-6 d-flex align-items-center justify-content-center" [style.background-color]="option.icon_color">
+                        <small id="option-icon"><span>{{option.icon}}</span><i [class]="option.active ? 'bi bi-dash-circle-fill' : 'bi bi-plus-circle-fill'"></i></small>
+                    </div>
+                    <div class="ms-3">
+                        <h3 class="mb-0 font-weight-bold">{{option.title}}</h3>
+                        <small *ngFor="let tag of option.tags; let last = last" class="text-muted fs-3">{{last ? tag : tag + ', '}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
