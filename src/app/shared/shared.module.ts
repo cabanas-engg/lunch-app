@@ -16,6 +16,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { OptionCardsComponent } from '../data/option-cards/option-cards.component';
 import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [OptionCardsComponent],
@@ -35,7 +37,8 @@ import { MatTableModule } from '@angular/material/table';
     MatSelectModule,
     MatBadgeModule,
     MatSliderModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatPaginatorModule
 
   ],
   exports: [
@@ -54,7 +57,8 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     ReactiveFormsModule,
     OptionCardsComponent,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class SharedModule { }

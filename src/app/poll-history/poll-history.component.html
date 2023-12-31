@@ -2,11 +2,19 @@
 <div class="card">
     <div class="card-body">
         <h4 class="card-title">All Polls</h4>
-            
-        <div class="d-flex align-content-center justify-content-center" style="margin-top: 15rem;" *ngIf="loading">
-            <div class="spinner-border text-secondary" role="status"></div>
+        <div class="d-md-flex align-items-center border-top bg-white p-3">
+            <div class="w-50">
+                <input type="text" placeholder="Search by Title" class="form-control rounded-pill" (keyup)="applyFilter($event)">
+            </div>
+            <div class="ms-auto mt-3 mt-md-0">
+                <div href="javascript:void(0)" class="d-flex align-items-center px-3 py-2 rounded-pill bg-light">
+                    <h5 class="mb-0 me-1 text-dark fs-3"> Total Polls </h5>
+                    <span class="badge bg-danger badge-pill px-3 fs-3">{{totalPolls}}</span><!---->
+                </div>
+            </div>
         </div>
-        <div class="table-responsive" *ngIf="!loading">
+            
+        <div class="table-responsive">
             <mat-table #table [dataSource]="pollDataSource" class="table align-middle">
 
                 <ng-container  matColumnDef="title">
@@ -48,6 +56,10 @@
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;" style="cursor:pointer" (click)="navigateToPoll(row.id)"></mat-row>
             </mat-table>  
+            <mat-paginator [length]="totalPolls" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 25]" (page)="setPage($event.pageIndex, $event.pageSize)"></mat-paginator>
+        </div>
+        <div class="d-flex align-content-center justify-content-center" style="margin-top: 15rem;" *ngIf="loading">
+            <div class="spinner-border text-secondary" role="status"></div>
         </div>
     </div>
     

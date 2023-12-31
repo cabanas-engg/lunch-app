@@ -7,7 +7,7 @@ import { Poll } from '../classes/create-poll';
 
 const apiKey = environment.apiKey;
 const createPollURL = 'https://api.strawpoll.com/v3/polls';
-const pollHistoryURL = 'https://api.strawpoll.com/v3/users/@me/polls';
+const pollHistoryURL = 'https://api.strawpoll.com/v3/users/@me/polls?';
 const getPollURL = 'https://api.strawpoll.com/v3/polls/';
 
 
@@ -46,9 +46,9 @@ export class ApiService {
   getPollData(poll_id: string):Observable<any> {
     return this.http.get<any>(getPollURL + poll_id,httpOptions)}
 
-  getHistory():Observable<any> {
-    return this.http.get<any>(pollHistoryURL,httpOptions
-    ).pipe(map(resp => {
+  getHistory(pageNumber: number, pageSize: number):Observable<any> {
+    return this.http.get<any>(pollHistoryURL + `limit=${pageSize.toString()}&page=${pageNumber.toString()}`,
+    httpOptions).pipe(map(resp => {
       resp.data.forEach((opt: any) => {
         opt.winner = this.getWinnerOption(opt.poll_options)
       })
