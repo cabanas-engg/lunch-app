@@ -9,5 +9,10 @@ body {
 
 * {
     font-family: "Asap", sans-serif;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Space Grotesk", sans-serif !important;
+}
+
+.mat-typography h3 {
+    line-height: 15px;
+    font-size: 15px;
 }

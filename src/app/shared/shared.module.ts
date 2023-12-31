@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { OptionCardsComponent } from '../data/option-cards/option-cards.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [OptionCardsComponent],
@@ -52,7 +53,8 @@ import { OptionCardsComponent } from '../data/option-cards/option-cards.componen
     MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,
-    OptionCardsComponent
+    OptionCardsComponent,
+    MatTableModule
   ]
 })
 export class SharedModule { }

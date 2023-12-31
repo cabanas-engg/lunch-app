@@ -19,10 +19,12 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';
+import { PollHistoryComponent } from './poll-history/poll-history.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PollHistoryComponent
   ],
   imports: [
     BrowserModule,

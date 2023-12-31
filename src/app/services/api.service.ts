@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environment/environment';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from "rxjs/operators";
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Observable, forkJoin } from 'rxjs';
+import { map, mergeMap } from "rxjs/operators";
 import { Poll } from '../classes/create-poll';
 
 const apiKey = environment.apiKey;
 const createPollURL = 'https://api.strawpoll.com/v3/polls';
+const pollHistoryURL = 'https://api.strawpoll.com/v3/users/@me/polls';
+const getPollURL = 'https://api.strawpoll.com/v3/polls/';
+
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -39,5 +42,33 @@ export class ApiService {
       createPollURL, JSON.stringify(poll),httpOptions
     ).pipe(map(resp => resp));
   }
+
+  getPollData(poll_id: string):Observable<any> {
+    return this.http.get<any>(getPollURL + poll_id,httpOptions)}
+
+  getHistory():Observable<any> {
+    return this.http.get<any>(pollHistoryURL,httpOptions
+    ).pipe(map(resp => {
+      resp.data.forEach((opt: any) => {
+        opt.winner = this.getWinnerOption(opt.poll_options)
+      })
+      return resp
+    }));
+  }
+  
+  getWinnerOption(poll_options: any[]): string {
+    let winner = "None";
+    let max_votes = 0;
+
+    poll_options.forEach((option: any) => {
+      if(option.has_votes && option.vote_count > max_votes) {
+        max_votes = option.vote_count;
+        winner = option.value;
+      }
+    });
+
+    return winner;
+  }
+  
 
 }

@@ -10,14 +10,14 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  // {
-  //   path: '/',
-  //   title: 'Alert',
-  //   icon: 'bi bi-bell',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
+  {
+    path: '/poll-history',
+    title: 'Poll History',
+    icon: 'bi bi-hourglass',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
   // {
   //   path: '/component/badges',
   //   title: 'Badges',
