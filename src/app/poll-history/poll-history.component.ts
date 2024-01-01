@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Product, TopSelling } from '../dashboard/dashboard-components/top-selling/top-selling-data';
 import { ApiService } from '../services/api.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
@@ -14,7 +13,7 @@ export class PollHistoryComponent implements OnInit {
   loading: boolean = false;
   currentDate: number = Math.floor(Date.now() / 1000);
   currentPage: number = 1;
-  pageSize: number = 10;
+  pageSize: number = 5;
   totalPolls: number = 0;
 
   displayedColumns:string[] = [

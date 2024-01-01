@@ -58,19 +58,9 @@
         <!-- ============================================================== -->
         <!-- Toggle which is visible on mobile only -->
         <!-- ============================================================== -->
-        <a
-          class="topbartoggler d-block d-lg-none waves-effect waves-light"
-          href="javascript:void(0)"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          (click)="isCollapsed = !isCollapsed"
-          [attr.aria-expanded]="!isCollapsed"
-        >
-          <i class="bi bi-text-right fs-6"></i>
-        </a>
+        <div
+          class="topbartoggler d-block d-lg-none waves-effect waves-light">
+      </div>
       </div>
       <!-- ============================================================== -->
       <!-- End Logo -->
@@ -81,6 +71,27 @@
         data-navbarbg="skin6"
         [ngbCollapse]="!isCollapsed"
       >
+      <div class="page-breadcrumb px-3 w-50" [ngClass]="mobileExp ? 'mobile-exp' : ''">
+        <div style="width: 95%; margin: auto">
+            <div class="d-flex flex-row">
+                <div class="align-self-center">
+                    <h4 class="page-title text-themecolor m-0">{{pageInfo['title']}}</h4>
+                </div>
+                <!-- <div class="align-self-center">
+                    <div class="breadcrumb d-flex align-items-center float-right float-sm-left">
+                        <ul class="list-style-none d-flex align-items-center">
+                            <ng-template ngFor let-url [ngForOf]="pageInfo['urls']" let-last="last">
+                                <li class="breadcrumb-item" *ngIf="!last" [routerLink]="url.url">
+                                    <a [routerLink]='url.url'>{{url.title}}</a>
+                                </li>
+                                <li class="breadcrumb-item active" *ngIf="last">{{url.title}}</li>
+                            </ng-template>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
         <app-navigation
           (toggleSidebar)="toggleSidebarType()"
           class="w-100"
@@ -124,9 +135,9 @@
     <!-- ============================================================== -->
     <!-- footer -->
     <!-- ============================================================== -->
-    <footer class="footer text-center">
+    <!-- <footer class="footer text-center">
       
-    </footer>
+    </footer> -->
     <!-- ============================================================== -->
     <!-- End footer -->
     <!-- ============================================================== -->

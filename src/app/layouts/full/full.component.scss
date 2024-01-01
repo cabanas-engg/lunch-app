@@ -2,3 +2,28 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+
+:host {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.page-breadcrumb {
+
+  &.mobile-exp {
+      width: 100%;
+  }
+
+  .page-title {
+      margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-breadcrumb {
+      width: 100%;
+  }
+}
