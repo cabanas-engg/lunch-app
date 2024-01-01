@@ -3,6 +3,14 @@ import { RouteInfo } from './sidebar.metadata';
 export const ROUTES: RouteInfo[] = [
  
   {
+    path: '/active',
+    title: 'Active Poll',
+    icon: 'bi bi-card-text',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
     path: '/dashboard',
     title: 'Dashboard',
     icon: 'bi bi-card-text',
@@ -18,14 +26,14 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  // {
-  //   path: '/component/badges',
-  //   title: 'Badges',
-  //   icon: 'bi bi-patch-check',
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
+  {
+    path: '/component/badges',
+    title: 'Reports',
+    icon: 'bi bi-patch-check',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
   // {
   //   path: '/component/buttons',
   //   title: 'Button',

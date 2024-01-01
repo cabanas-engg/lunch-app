@@ -10,17 +10,16 @@ export const routes: Routes = [
       children: [
         { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
         {
-          path: 'dashboard2',
-          loadChildren: () => import('./home-page/home-page.module').then((m) => m.HomePageModule),
-        },
-        {
           path: 'dashboard',
-          loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+          loadChildren: () => import('./home-page/home-page.module').then((m) => m.HomePageModule),
         },
         {
           path: 'poll-history',
           component: PollHistoryComponent,
-          data: {name: "Poll History"}
+          data: {
+            title: "Poll History",
+            urls: [{ title: "Poll History"}],
+          },
         },
       ]
     },
