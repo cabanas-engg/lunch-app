@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, SimpleChanges } from '@angular/core';
 import { lunch_options, option } from '../lunch-options-data';
 
 @Component({
@@ -8,15 +8,17 @@ import { lunch_options, option } from '../lunch-options-data';
 })
 export class OptionCardsComponent {
   options: option[] = [];
-  @Output() emitOption = new EventEmitter<string>();
+  activeOptions: option[] = [];
+  @Output() emitOptions = new EventEmitter<option[]>();
 
   constructor() { 
     this.options = lunch_options;
   }
 
-  addOption(option: option): void {
-    option.active = !option.active;     
-    this.emitOption.emit(option.title)
+  handleOption(option: option): void {
+    option.active = !option.active
+    this.activeOptions = this.options.filter(opt => opt.active)
+    this.emitOptions.emit(this.activeOptions)
   }
 
 }

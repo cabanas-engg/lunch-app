@@ -1,24 +1,24 @@
-<p>dashboard works!</p>
-<mat-form-field appearance="outline">
-    <input matInput color="primary" placeholder="Poll Title" [(ngModel)]="newPoll.title" type="text">
-</mat-form-field>
-<mat-form-field appearance="outline">
-    <input matInput color="primary" placeholder="Option Description" [(ngModel)]="newOption.value" type="text">
-</mat-form-field>
-<!-- <button mat-raised-button color="primary" (click)="addPollOption()"><mat-icon>add</mat-icon>Add</button> -->
 
-<button mat-raised-button color="primary" >
-    <mat-icon>add</mat-icon>Chipotle
-</button>
-<div style="display: flex;" class="option-container" (click)="addPollOption('Chipotle')">
-    <span  matTooltip="Chipotle" class="member-label">
-        <b>C</b>
-    </span>
-    <p style="padding: 0; margin: 0px;">Chipotle</p>
-</div>
 
-<p>Added Options</p>
-<p *ngFor="let opt of newPoll.poll_options">{{opt.value}}</p>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Create New Poll</h4>
+        <div class="d-md-flex align-items-center border-top bg-white p-4 mb-3 justify-content-center flex-column">
+            <h4 class="w-50 card-subtitle d-flex justify-content-center gap-2"><i class="bi bi-1-square"></i> Add Title</h4>
+            <div class="w-50">
+                <input type="text" placeholder="Poll Title" class="form-control rounded-pill"  [(ngModel)]="newPoll.title">
+            </div>
+        </div>
+        <div class="d-md-flex align-items-center border-top bg-white p-4 mb-3 justify-content-center flex-column">
+            <h4 class="w-50 card-subtitle d-flex justify-content-center gap-2"><i class="bi bi-2-square"></i> Add Options</h4>
+            <app-option-cards (emitOptions)="addPollOptions($event)"></app-option-cards>
+        </div>
+        <div class="d-md-flex align-items-center border-top bg-white p-3 justify-content-center flex-column">
+            <h4 class="w-50 card-subtitle d-flex justify-content-center gap-2"><i class="bi bi-3-square"></i> Generate</h4>
+            <button type="button" class="btn mt-3 btn-outline-secondary btn-rounded" [disabled]="!newPoll.title" (click)="createPoll()"><i [class]="!newPoll.title ? 'bi bi-x-circle' : 'bi bi-check-circle'"></i> Create Poll </button>
+        </div>
+    </div>
+</div>   
 
 <div *ngIf="this.generatedPoll.src.length">
     <h3>Generated Poll</h3>
@@ -28,7 +28,8 @@
     </div>
 </div>
 
-<button mat-raised-button color="primary" (click)="createPoll()">Create Poll</button>
+<!-- <button mat-raised-button color="primary" (click)="createPoll()">Create Poll</button>
+<button type="button" class="btn btn-outline-secondary btn-rounded"><i class="bi bi-check-circle"></i> Create Poll </button> -->
 
 
 <!-- 
@@ -40,3 +41,7 @@
     |  Poll Reports  | -> graphs to show what won the most etc 
 
  -->
+
+
+
+
