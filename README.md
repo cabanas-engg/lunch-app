@@ -1,3 +1,18 @@
+# Getting API Key
+
+### Create StrawPoll Account
+https://strawpoll.com/signup/
+
+### Generate API Key
+Navigate to your account > Settings > API > Generate new key
+
+### Attach API Key
+Update environment file to contain your generated API Key
+
+### API Docs
+https://strawpoll.com/docs/api/strawpoll-api-v3.html#/
+
+
 # LunchApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
