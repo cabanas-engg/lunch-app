@@ -21,11 +21,13 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';
 import { PollHistoryComponent } from './poll-history/poll-history.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ActivePollComponent } from './active-poll/active-poll.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PollHistoryComponent
+    PollHistoryComponent,
+    ActivePollComponent
   ],
   imports: [
     BrowserModule,

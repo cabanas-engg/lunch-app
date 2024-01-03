@@ -1,0 +1,8 @@
+.btn.btn-outline-secondary:not(:disabled) {
+    color: #233242;
+    border-color: #233242a5;
+
+    &:hover {
+        background: #ffc300;
+    }
+}

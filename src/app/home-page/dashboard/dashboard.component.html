@@ -20,18 +20,6 @@
     </div>
 </div>   
 
-<div *ngIf="this.generatedPoll.src.length">
-    <h3>Generated Poll</h3>
-    <div class="strawpoll-embed" [id]="generatedPoll.id" style="height: 452px; max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;">
-        <iframe title="StrawPoll Embed" [id]="generatedPoll.iframe_id" [src]="allowGeneratedPoll()" style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1;" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe>
-        <script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script>
-    </div>
-</div>
-
-<!-- <button mat-raised-button color="primary" (click)="createPoll()">Create Poll</button>
-<button type="button" class="btn btn-outline-secondary btn-rounded"><i class="bi bi-check-circle"></i> Create Poll </button> -->
-
-
 <!-- 
 
         navigation?

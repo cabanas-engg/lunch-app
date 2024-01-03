@@ -58,7 +58,7 @@ export class PollConfig {
     deadline_at: number = (Math.floor(Date.now() / 1000) + 10850);
     duplication_checking: "ip" | "session" | "invite" | "none" = "session";
     allow_vpn_users: boolean = false;
-    edit_vote_permissions: "admin" | "admin_voter" | "voter" | "nobody" = "admin";
+    edit_vote_permissions: "admin" | "admin_voter" | "voter" | "nobody" = "nobody";
     force_appearance: "auto" | "dark" | "light" = "dark";
     hide_participants: boolean = false;
     is_multiple_choice: boolean = true;

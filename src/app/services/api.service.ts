@@ -69,6 +69,11 @@ export class ApiService {
 
     return winner;
   }
+
+  getActivePoll():Observable<any> {
+    return this.http.get<any>(pollHistoryURL + 'limit=1&page=1',
+    httpOptions).pipe(map(resp => resp.data[0]));
+  }
   
 
 }
