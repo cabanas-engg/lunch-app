@@ -5,7 +5,7 @@
         <div *ngIf="this.generatedPoll.src.length === 0; else poll">
             <div class="d-md-flex align-items-center bg-white p-3 justify-content-center flex-column">
                 <h4 class="card-title">No Active Poll</h4>
-                <button type="button" class="btn mt-3 btn-outline-secondary btn-rounded" [routerLink]="['/dashboard']"><i class="bi bi-plus-circle"></i> Create One </button>
+                <button type="button" class="btn mt-3 btn-outline-secondary btn-rounded" [routerLink]="['/new-poll']"><i class="bi bi-plus-circle"></i> Create One </button>
             </div>
         </div>
 

@@ -30,6 +30,14 @@ export const routes: Routes = [
             urls: [{ title: "Active Poll"}],
           },
         },
+        {
+          path: 'new-poll',
+          component: CreatePollComponent,
+          data: {
+            title: "New Poll",
+            urls: [{ title: "New Poll"}],
+          },
+        },
       ]
     },
 ];

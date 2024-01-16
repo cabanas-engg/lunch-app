@@ -11,6 +11,14 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
+    path: '/new-poll',
+    title: 'New Poll',
+    icon: 'bi bi-menu-button-wide',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
     path: '/dashboard',
     title: 'Dashboard',
     icon: 'bi bi-menu-button-wide',
