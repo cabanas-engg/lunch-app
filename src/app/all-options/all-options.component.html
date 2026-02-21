@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row mt-3 justify-content-center align-items-center">
+            <h4 class="card-title text-center">All Options</h4>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 card-column" *ngFor='let option of options; let index = index'>
+                <div class="card shadow-sm rounded-4 border border-dark-subtle p-1">
+                    <div class="d-flex align-items-center"  [style.color]="option.icon_color">
+                        <h4 class="mb-0 font-weight-bold">{{option.title}}&nbsp;&#183;&nbsp;</h4>
+                        <small *ngFor="let tag of option.tags; let last = last" class="text-muted fs-3">{{last ? tag : tag + ', '}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
