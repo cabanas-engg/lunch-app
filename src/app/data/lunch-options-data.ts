@@ -15,13 +15,6 @@ export const lunch_options: option[] = [
         active: false
     },
     {
-        icon_color: '#fe0100',
-        icon: '🍱',
-        title: 'Shogun',
-        tags: ['Japanese', 'Bento Box'],
-        active: false
-    },
-    {
         icon_color: '#dd0032',
         icon: '🍗',
         title: 'Chick-fil-A',
@@ -50,45 +43,10 @@ export const lunch_options: option[] = [
         active: false
     },
     {
-        icon_color: '#000000',
-        icon: '🥙',
-        title: "The Greek Pita Place",
-        tags: ['Greek', 'Gyros'],
-        active: false
-    },
-    {
-        icon_color: '#e7e01f',
-        icon: '🌮',
-        title: "Tacos Chabelita",
-        tags: ['Mexican', 'Tacos'],
-        active: false
-    },
-    {
-        icon_color: '#0565a2',
-        icon: '🍔',
-        title: "Smash N' Dash",
-        tags: ['Burgers', 'Shakes'],
-        active: false
-    },
-    {
-        icon_color: '#b91833',
-        icon: '🍙',
-        title: "Manna",
-        tags: ['Japanese'],
-        active: false
-    },
-    {
         icon_color: '#f58025',
         icon: '🥩',
         title: "Mission BBQ",
         tags: ['BBQ', 'Subs'],
-        active: false
-    },
-    {
-        icon_color: '#caa61a',
-        icon: '🍕',
-        title: "Laurel Pizzeria",
-        tags: ['Pizza'],
         active: false
     },
     {
@@ -98,5 +56,83 @@ export const lunch_options: option[] = [
         tags: ['Subs'],
         active: false
     },
+    {
+        icon_color: '#008c2c',
+        icon: '🥪',
+        title: "Panera",
+        tags: ['Subs', 'Soup'],
+        active: false
+    },
+    {
+        icon_color: '#e31837',
+        icon: '🍔',
+        title: 'McDonald’s',
+        tags: ['Burgers', 'Fast Food'],
+        active: false
+    },
+    {
+        icon_color: '#da291c',
+        icon: '🍔',
+        title: 'Wendy’s',
+        tags: ['Burgers', 'Fast Food'],
+        active: false
+    },
+    {
+        icon_color: '#fcb514',
+        icon: '🍔',
+        title: 'Five Guys',
+        tags: ['Burgers', 'Fries'],
+        active: false
+    },
+    {
+        icon_color: '#ff1d25',
+        icon: '🍕',
+        title: 'Pizza Hut',
+        tags: ['Pizza'],
+        active: false
+    },
+    {
+        icon_color: '#006491',
+        icon: '🍕',
+        title: 'Domino’s',
+        tags: ['Pizza'],
+        active: false
+    },
+    {
+        icon_color: '#e6002d',
+        icon: '🌮',
+        title: 'Taco Bell',
+        tags: ['Mexican', 'Fast Food'],
+        active: false
+    },
+    {
+        icon_color: '#ff6319',
+        icon: '🥪',
+        title: 'Jimmy John’s',
+        tags: ['Subs'],
+        active: false
+    },
+    {
+        icon_color: '#00704a',
+        icon: '🥗',
+        title: 'Sweetgreen',
+        tags: ['Salads', 'Bowls'],
+        active: false
+    },
+    {
+        icon_color: '#003a8f',
+        icon: '🍝',
+        title: 'Olive Garden',
+        tags: ['Italian'],
+        active: false
+    },
+    {
+        icon_color: '#8b0000',
+        icon: '🥩',
+        title: 'Texas Roadhouse',
+        tags: ['Steak', 'American'],
+        active: false
+    }
+
 
 ] 

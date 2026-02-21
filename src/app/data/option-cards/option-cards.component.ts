@@ -12,7 +12,7 @@ export class OptionCardsComponent {
   @Output() emitOptions = new EventEmitter<option[]>();
 
   constructor() { 
-    this.options = lunch_options;
+    this.options = JSON.parse(JSON.stringify(lunch_options));
   }
 
   handleOption(option: option): void {

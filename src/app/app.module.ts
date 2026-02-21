@@ -16,20 +16,13 @@ import { FullComponent } from './layouts/full/full.component';
 import { NavigationComponent } from './shared/header/navigation.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';
-import { PollHistoryComponent } from './poll-history/poll-history.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ActivePollComponent } from './active-poll/active-poll.component';
-import { CreatePollComponent } from './create-poll/create-poll.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PollHistoryComponent,
-    ActivePollComponent,
-    CreatePollComponent,
+    AppComponent    
   ],
   imports: [
     BrowserModule,
@@ -40,8 +33,7 @@ import { CreatePollComponent } from './create-poll/create-poll.component';
     FullComponent,
     RouterModule.forRoot(routes, { useHash: false }),
     NavigationComponent,
-    SidebarComponent,
-    NgbModule
+    SidebarComponent
   ],
   providers: [
     {

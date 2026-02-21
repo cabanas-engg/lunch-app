@@ -1,17 +1,4 @@
-.card-subtitle {
-    margin-bottom: 15px;
+.card {
+    background: #f3f4f5;
 }
 
-.btn.btn-outline-secondary:disabled {
-    color: #ff0000;
-    border-color: #ff00009a;
-}
-
-.btn.btn-outline-secondary:not(:disabled) {
-    color: #03bf09;
-    border-color: #6aa16c;
-
-    &:hover {
-        background: #233242;
-    }
-}

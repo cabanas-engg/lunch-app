@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FullComponent } from './layouts/full/full.component';
 import { PollHistoryComponent } from './poll-history/poll-history.component';
 import { ActivePollComponent } from './active-poll/active-poll.component';
+import { CreatePollComponent } from './create-poll/create-poll.component';
+import { WinnersWidgetComponent } from './winners-widget/winners-widget.component';
 
 export const routes: Routes = [
     {
@@ -36,6 +38,14 @@ export const routes: Routes = [
           data: {
             title: "New Poll",
             urls: [{ title: "New Poll"}],
+          },
+        },
+        {
+          path: 'winner',
+          component: WinnersWidgetComponent,
+          data: {
+            title: "Winner",
+            urls: [{ title: "Winner"}],
           },
         },
       ]

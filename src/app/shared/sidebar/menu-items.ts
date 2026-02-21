@@ -1,11 +1,10 @@
 import { RouteInfo } from './sidebar.metadata';
 
 export const ROUTES: RouteInfo[] = [
- 
   {
-    path: '/active-poll',
-    title: 'Active Poll',
-    icon: 'bi bi-activity',
+    path: '/dashboard',
+    title: 'Dashboard',
+    icon: 'bi bi bi-speedometer',
     class: '',
     extralink: false,
     submenu: []
@@ -13,14 +12,6 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '/new-poll',
     title: 'New Poll',
-    icon: 'bi bi-menu-button-wide',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/dashboard',
-    title: 'Dashboard',
     icon: 'bi bi-menu-button-wide',
     class: '',
     extralink: false,

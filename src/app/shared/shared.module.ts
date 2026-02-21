@@ -17,10 +17,25 @@ import { MatSelectModule } from '@angular/material/select';
 import { OptionCardsComponent } from '../data/option-cards/option-cards.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { WinnersWidgetComponent } from '../winners-widget/winners-widget.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ActivePollComponent } from '../active-poll/active-poll.component';
+import { PollHistoryComponent } from '../poll-history/poll-history.component';
+import { CreatePollComponent } from '../create-poll/create-poll.component';
+import { AllOptionsComponent } from '../all-options/all-options.component';
+
 
 
 @NgModule({
-  declarations: [OptionCardsComponent],
+  declarations: [
+    OptionCardsComponent,
+    WinnersWidgetComponent,
+    ActivePollComponent,
+    PollHistoryComponent,
+    ActivePollComponent,
+    CreatePollComponent,
+    AllOptionsComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -38,7 +53,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatBadgeModule,
     MatSliderModule,
     MatSnackBarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgApexchartsModule,
+    MatTableModule
 
   ],
   exports: [
@@ -58,7 +75,14 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     ReactiveFormsModule,
     OptionCardsComponent,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgbModule,
+    NgApexchartsModule,
+    WinnersWidgetComponent,
+    PollHistoryComponent,
+    ActivePollComponent,
+    CreatePollComponent,
+    AllOptionsComponent
   ]
 })
 export class SharedModule { }
