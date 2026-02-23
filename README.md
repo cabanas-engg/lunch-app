@@ -1,19 +1,22 @@
-# Getting API Key
+# Bite Poll
+A simple web app that lets users create quick polls using the Strawpoll API and view past poll winners. Perfect for deciding lunch spots or making group decisions
 
-### Create StrawPoll Account
+## Getting API Key
+
+#### Create StrawPoll Account
 https://strawpoll.com/signup/
 
-### Generate API Key
+#### Generate API Key
 Navigate to your account > Settings > API > Generate new key
 
-### Attach API Key
+#### Attach API Key
 Update environment file to contain your generated API Key
 
-### API Docs
+#### API Docs
 https://strawpoll.com/docs/api/strawpoll-api-v3.html#/
 
 
-# LunchApp
+# Bite Poll
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
@@ -40,3 +43,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## License
+
+MIT License – free to use, modify, and share
